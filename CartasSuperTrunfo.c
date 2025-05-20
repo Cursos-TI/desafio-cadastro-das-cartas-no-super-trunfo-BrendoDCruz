@@ -16,8 +16,6 @@ int main() {
     float area2;
     float pib1; 
     float pib2;
-    float dpopulacional;
-    float pibpc;
 
     printf("Digite o nome do primeiro Estado: \n");
     scanf("%s", estado1);
@@ -62,13 +60,19 @@ int main() {
     printf("Digite quantos pontos turisticos a segunda cidade tem: \n");
     scanf("%d", &pturistico2);
 
-    
-    printf("Carta 1: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %dkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n\n", 
-    estado1, codigo1, cidade1, populacao1, area1, pib1, pturistico1);
+    //fiquei 20 minutos fazendo essa parte, esqueci que tinha que ficar na parte de baixo da captação dos dados... codar por amor S2
+    float dpopulacional1 = populacao1 / area1;
+    float dpopulacional2 = populacao2 / area2;
+    float pibpc1 = pib1 / populacao1;
+    float pibpc2 = pib2 / populacao2;
 
-    printf("Carta 2: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %dkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n", 
-    estado2, codigo2, cidade2, populacao2, area2, pib2, pturistico2);
+    printf("Carta 1: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2afkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2f\n Pib per Capita: %.2f\n\n", 
+    estado1, codigo1, cidade1, populacao1, area1, pib1, pturistico1, dpopulacional1, pibpc1);
+
+    printf("Carta 2: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2fkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2f\n Pib per Capita: %.2f\n", 
+    estado2, codigo2, cidade2, populacao2, area2, pib2, pturistico2, dpopulacional2, pibpc2);
 
     return 0;
 }
+
 
