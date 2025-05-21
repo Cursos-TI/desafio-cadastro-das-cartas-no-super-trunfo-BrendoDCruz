@@ -65,12 +65,15 @@ int main() {
     float dpopulacional2 = populacao2 / area2;
     float pibpc1 = pib1 / populacao1;
     float pibpc2 = pib2 / populacao2;
+    float superpoder1 = (float)populacao1 + area1 + pib1 + (float)pturistico1 + pibpc1 + (1.0f / dpopulacional1);
+    float superpoder2 = (float)populacao2 + area2 + pib2 + (float)pturistico2 + pibpc2 + (1.0f / dpopulacional2);
 
-    printf("Carta 1: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2fkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2fhab/km²\n Pib per Capita: %.2f reais\n\n", 
-    estado1, codigo1, cidade1, populacao1, area1, pib1, pturistico1, dpopulacional1, pibpc1);
 
-    printf("Carta 2: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2fkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2fhab/km²\n Pib per Capita: %.2f reais\n\n", 
-    estado2, codigo2, cidade2, populacao2, area2, pib2, pturistico2, dpopulacional2, pibpc2);
+    printf("Carta 1: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2fkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2fhab/km²\n Pib per Capita: %.2f reais\n Super Poder Carta 1: %.2f\n\n", 
+    estado1, codigo1, cidade1, populacao1, area1, pib1, pturistico1, dpopulacional1, pibpc1, superpoder1);
+
+    printf("Carta 2: \n Estado: %s\n Código: %s\n Cidade: %s\n População: %d\n Área: %.2fkm²\n PIB: R$%.2f\n Pontos Turísticos: %d\n Densisade Populacional: %.2fhab/km²\n Pib per Capita: %.2f reais\n Super Poder Carta 2: %.2f\n\n", 
+    estado2, codigo2, cidade2, populacao2, area2, pib2, pturistico2, dpopulacional2, pibpc2, superpoder2);
 
     float populacaov = populacao1 >= populacao2;
     float areav = area1 >= area2;
@@ -78,9 +81,7 @@ int main() {
     float pturisticov = pturistico1 >= pturistico2;
     float dpopulacionalv = dpopulacional1 >= dpopulacional2;
     float pibpcv = pibpc1 >= pibpc2;
-    float superpoder1 = (float)populacao1 + area1 + pib1 + (float)pturistico1 + pibpc1 + (1.0f / dpopulacional1);
-    float superpoder2 = (float)populacao2 + area2 + pib2 + (float)pturistico2 + pibpc2 + (1.0f / dpopulacional2);
-
+    
     printf("Resultados:\n");
     printf(" População: Carta %d venceu\n", 2 - (populacao1 >= populacao2));
     printf(" Área: Carta %d venceu\n", 2 - (area1 >= area2));
