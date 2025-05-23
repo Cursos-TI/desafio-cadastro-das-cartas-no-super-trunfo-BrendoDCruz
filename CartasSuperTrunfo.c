@@ -87,7 +87,7 @@ printf("População: Carta %d venceu\n", 2 - (populacao1 >= populacao2));
 printf("Área: Carta %d venceu\n", 2 - (area1 >= area2));
 printf("PIB: Carta %d venceu\n", 2 - (pib1 >= pib2));
 printf("Pontos Turísticos: Carta %d venceu\n", 2 - (pturistico1 >= pturistico2));
-printf("Densidade Populacional: Carta %d venceu\n", 2 - (dpopulacional1 >= dpopulacional2));
+printf("Densidade Populacional: Carta %d venceu\n", 2 - (dpopulacional1 <= dpopulacional2));
 printf("PIB per Capita: Carta %d venceu\n", 2 - (pibpc1 >= pibpc2));
     
     return 0;
