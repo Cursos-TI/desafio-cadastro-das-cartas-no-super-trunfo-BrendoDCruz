@@ -82,70 +82,13 @@ int main() {
     float dpopulacionalv = dpopulacional1 <= dpopulacional2;
     float pibpcv = pibpc1 >= pibpc2;
     
-   printf("Resultados:\n");
-
-printf("População:\n");
-printf("Carta 1: %d\n", populacao1);
-printf("Carta 2: %d\n", populacao2);
-if (populacao1 > populacao2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("Área:\n");
-printf("Carta 1: %.2f km²\n", area1);
-printf("Carta 2: %.2f km²\n", area2);
-if (area1 > area2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("PIB:\n");
-printf("Carta 1: R$ %.2f\n", pib1);
-printf("Carta 2: R$ %.2f\n", pib2);
-if (pib1 > pib2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("Pontos Turísticos:\n");
-printf("Carta 1: %d\n", pturistico1);
-printf("Carta 2: %d\n", pturistico2);
-if (pturistico1 > pturistico2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("Densidade Populacional:\n");
-printf("Carta 1: %.2f hab/km²\n", dpopulacional1);
-printf("Carta 2: %.2f hab/km²\n", dpopulacional2);
-if (dpopulacional1 < dpopulacional2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("PIB per Capita:\n");
-printf("Carta 1: R$ %.2f\n", pibpc1);
-printf("Carta 2: R$ %.2f\n", pibpc2);
-if (pibpc1 > pibpc2) {
-    printf("Carta 1 venceu\n\n");
-} else {
-    printf("Carta 2 venceu\n\n");
-}
-
-printf("Super Poder:\n");
-printf("Carta 1: %.2f\n", superpoder1);
-printf("Carta 2: %.2f\n", superpoder2);
-if (superpoder1 > superpoder2) {
-    printf("Carta 1 venceu\n");
-} else {
-    printf("Carta 2 venceu\n");
-}
+printf("\nResultados:\n");
+printf("População: Carta %d venceu\n", 2 - (populacao1 >= populacao2));
+printf("Área: Carta %d venceu\n", 2 - (area1 >= area2));
+printf("PIB: Carta %d venceu\n", 2 - (pib1 >= pib2));
+printf("Pontos Turísticos: Carta %d venceu\n", 2 - (pturistico1 >= pturistico2));
+printf("Densidade Populacional: Carta %d venceu\n", 2 - (dpopulacional1 >= dpopulacional2));
+printf("PIB per Capita: Carta %d venceu\n", 2 - (pibpc1 >= pibpc2));
     
     return 0;
 }
